@@ -1,4 +1,5 @@
-## Print list of task descriptions
+from modules.task_list import *
+
 def print_task_descriptions(list):
     for task in list:
         print(task["description"])
@@ -10,20 +11,16 @@ def print_list(list):
 def mark_task_complete(task):
     task["completed"] = True
 
-# create a task
 def create_task(description, time_taken):
     task = {}
     task["description"] = description
     task["completed"] = False
     task["time_taken"] = time_taken
-
     return task
 
 def add_to_list(list, task):
     list.append(task)
  
-
-
 def print_menu():
     print("Options:")
     print("1: Display All Tasks")
